@@ -1,4 +1,5 @@
-/*const obj = {
+/*
+const obj = {
     name: 'Placide',
     sing() {
         return 'lalala ' + this.name
@@ -8,10 +9,11 @@
         return this.sing() + '!'
     }
 }
-obj.singAgain()*/
+obj.singAgain()
+*/
 
 
-function importantPerson() {
+/*function importantPerson() {
     const name = 'Foleu'
     console.log(this.name)
 }
@@ -26,4 +28,19 @@ const obj2 = {
     importantPerson: importantPerson
 }
 
-obj1.importantPerson()
+obj1.importantPerson()*/
+
+const a = function (){
+    console.log('a',this)
+    const b = function(){
+        console.log('b',this)
+        const c = {
+            hi: function(){
+                console.log('c',this)
+            }
+        }
+        c.hi()
+    }
+    b()
+}
+a()
